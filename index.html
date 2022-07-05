@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const calculator = {
+            leftNumber : +prompt("Enter the left number") ,
+            operator : prompt("Enter the Operator") ,
+            rightNumber : +prompt("Enter the right number") ,
+            result : 0 ,
+            plus : function() {
+                calculator['result'] = calculator['leftNumber'] + calculator['rightNumber'] ;
+                console.log(calculator['result']) ;
+            },
+            Zarb : function() {
+                calculator['result'] = calculator['leftNumber'] * calculator['rightNumber'] ;
+                console.log(calculator['result']);
+            },
+            mines : function() {
+                calculator['result'] = calculator['leftNumber'] - calculator['rightNumber'] ;
+                console.log(calculator['result']) ;
+            },
+            Taqsim : function() {
+                calculator['result'] = calculator['leftNumber'] / calculator['rightNumber'] ;
+                console.log(calculator['result']);
+            },
+            axactCalculator : function() {
+                switch (calculator['Operator']) {
+                    case "+" :
+                        calculator['plus']()
+                        break;
+                    case "-" :
+                        calculator['mines']()
+                        break;
+                    case "*" :
+                        calculator['Zarb']()
+                        break;
+                    case "/" :
+                        calculater['Taqsim']()
+                        break;
+                }
+            },
+        }
+        calculator['axactCalculator']();
+    </script>
+</body>
+</html>
